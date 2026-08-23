@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The portfolio of Bulbul Das, an MCA student focused on Cloud, DevOps, and Software Development.">
+  <title>Bulbul Das | Cloud &amp; DevOps Portfolio</title>
+
+  <style>
+    :root { --navy: #12304a; --blue: #176b87; --accent: #f4b942; --page: #f4f7fa; --surface: #ffffff; --text: #21313f; --muted: #5f6f7d; --border: #dce5ec; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--text); background: var(--page); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
+    a { color: var(--blue); }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+    .site-header { color: #ffffff; background: var(--navy); }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; }
+    .brand { color: #ffffff; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em; text-decoration: none; }
+    nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.9rem; padding: 0; margin: 0; list-style: none; }
+    nav a { color: #e8f1f7; font-size: 0.92rem; text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+    .hero { padding: 5.5rem 0 5rem; background: linear-gradient(135deg, var(--navy), #1b5774); }
+    .hero-content { max-width: 760px; }
+    .eyebrow { margin: 0 0 0.8rem; color: var(--accent); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2.4rem, 6vw, 4.5rem); }
+    .hero p:not(.eyebrow) { max-width: 680px; margin: 1.25rem 0 2rem; color: #e8f1f7; font-size: 1.15rem; }
+    .button { display: inline-block; padding: 0.75rem 1.15rem; color: var(--navy); background: var(--accent); border-radius: 0.3rem; font-weight: 700; text-decoration: none; }
+    .button:hover { background: #ffd36d; }
+    main { padding: 1rem 0 3.5rem; }
+    section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+    section:last-child { border-bottom: 0; }
+    .section-heading { max-width: 700px; margin-bottom: 1.75rem; }
+    h2 { margin: 0 0 0.65rem; color: var(--navy); font-size: clamp(1.75rem, 4vw, 2.3rem); }
+    .section-heading p, .muted { margin: 0; color: var(--muted); }
+    .two-column { display: grid; grid-template-columns: 1.35fr 1fr; gap: 2.5rem; align-items: start; }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 0.7rem; padding: 0; margin: 0; list-style: none; }
+    .skills-list li { padding: 0.45rem 0.8rem; color: var(--navy); background: #e8f2f7; border: 1px solid #c8dfe9; border-radius: 999px; font-size: 0.95rem; font-weight: 600; }
+    .timeline, .project-grid, .education-grid { display: grid; gap: 1.25rem; }
+    .card { padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 0.5rem; box-shadow: 0 5px 18px rgb(18 48 74 / 0.06); }
+    .card h3 { margin: 0 0 0.3rem; color: var(--navy); font-size: 1.2rem; }
+    .role-details { margin: 0 0 1rem; color: var(--muted); font-weight: 600; }
+    .card p:last-child { margin-bottom: 0; }
+    .project-grid, .education-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .project-card { height: 100%; }
+    .project-type { margin: 0 0 0.6rem; color: var(--blue); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; }
+    .contact-panel { padding: 2rem; color: #ffffff; background: var(--navy); border-radius: 0.55rem; }
+    .contact-panel h2 { color: #ffffff; }
+    .contact-panel p { max-width: 720px; margin-bottom: 1.25rem; color: #e8f1f7; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; padding: 0; margin: 0; list-style: none; }
+    .contact-links a { color: #ffffff; font-weight: 700; }
+    .site-footer { padding: 1.5rem 0; color: #cddbe5; background: #0b2235; font-size: 0.92rem; text-align: center; }
+    .site-footer p { margin: 0; }
+    @media (max-width: 700px) {
+      .nav-bar, .two-column { display: block; }
+      .nav-bar { padding-bottom: 1.1rem; }
+      nav ul { justify-content: flex-start; margin-top: 0.75rem; }
+      .hero { padding: 4.25rem 0; }
+      .project-grid, .education-grid { grid-template-columns: 1fr; }
+      section { padding: 3rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="#top">Bulbul Das</a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero" id="top">
+      <div class="container hero-content">
+        <p class="eyebrow">Cloud &amp; DevOps · Docker · CI/CD · AWS Deployment</p>
+        <h1>Deploying applications reliably with Cloud and DevOps practices.</h1>
+        <p>I am Bulbul Das, an MCA student focused on containerization, CI/CD automation, Linux, and AWS-based application deployment. I build practical projects to understand the complete path from source code to a live service.</p>
+        <a class="button" href="#projects">Explore deployment projects</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" aria-labelledby="about-heading">
+      <div class="two-column">
+        <div>
+          <div class="section-heading">
+            <h2 id="about-heading">About me</h2>
+            <p>Focused on the tools and practices that move applications from code to the cloud.</p>
+          </div>
+          <p>I am an MCA student with a BCA background and a clear focus on Cloud and DevOps. I am building hands-on experience with Git, Docker, Linux, GitHub Actions, CI/CD pipelines, and AWS to package applications, automate delivery, and deploy them reliably.</p>
+        </div>
+        <aside class="card" aria-label="Professional focus">
+          <h3>Professional focus</h3>
+          <p>Cloud &amp; DevOps Deployment</p>
+          <p class="muted">Containerization, CI/CD automation, Linux administration, and AWS deployment.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="section-heading">
+        <h2 id="skills-heading">Cloud &amp; DevOps skills</h2>
+        <p>Deployment-first tools, with application technologies as a supporting foundation.</p>
+      </div>
+      <ul class="skills-list">
+        <li>AWS</li><li>Docker</li><li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Linux</li><li>CI/CD</li><li>Java</li><li>Python</li><li>Spring Boot</li><li>MySQL</li><li>HTML</li><li>CSS</li>
+      </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="section-heading">
+        <h2 id="experience-heading">Work experience</h2>
+        <p>Experience coordinating software and website project delivery.</p>
+      </div>
+      <div class="timeline">
+        <article class="card">
+          <h3>Junior Project Manager</h3>
+          <p class="role-details">Digital Piloto Pvt. Ltd., Kolkata · December 2025 – April 2026</p>
+          <p>Coordinated end-to-end delivery of software and website projects across development, frontend, SEO, design, and other internal teams. Gathered and clarified client requirements, translated them into actionable tasks, and coordinated execution across cross-functional teams.</p>
+          <p>Managed project timelines, priorities, dependencies, prerequisites, and progress tracking to support timely delivery. Acted as a communication bridge between clients and technical teams, coordinating changes, resolving issues, and supporting reviews and final delivery. Prepared project documentation, prerequisites, and SOPs for projects across India, the USA, Canada, and Australia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <p>Practical projects that demonstrate containerization, automated delivery, and cloud deployment.</p>
+      </div>
+      <div class="project-grid">
+        <article class="card project-card"><p class="project-type">Docker · Spring Boot</p><h3>Employee Management System</h3><p>Containerized a Spring Boot and MySQL CRUD service with Docker, using the application as a practical environment for packaging and deployment workflows.</p></article>
+        <article class="card project-card"><p class="project-type">CI/CD · Docker · AWS EC2</p><h3>Task Manager — CI/CD Deployment</h3><p>Containerized a full-stack task manager and deployed it on AWS EC2 through a GitHub Actions CI/CD workflow, automating the build-and-deploy path.</p></article>
+        <article class="card project-card"><p class="project-type">Docker · Cloud Infrastructure</p><h3>AirCanvas — AI Gesture Drawing Application</h3><p>Packaged an AI gesture-drawing application for Docker-based deployment, applying cloud infrastructure concepts to make the service easier to run consistently.</p></article>
+        <article class="card project-card"><p class="project-type">Supporting Application Project</p><h3>Student Record Management System</h3><p>A Python and MySQL record-management application that strengthened my understanding of the application layer behind deployment workflows.</p></article>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <div class="section-heading">
+        <h2 id="education-heading">Education</h2>
+        <p>Academic foundations supporting my software and cloud learning journey.</p>
+      </div>
+      <div class="education-grid">
+        <article class="card"><h3>Master of Computer Applications</h3><p class="role-details">MCA</p><p>Developing deeper knowledge in computer applications, software development, and modern technology practices.</p></article>
+        <article class="card"><h3>Bachelor of Computer Applications</h3><p class="role-details">BCA</p><p>Built a foundation in programming, databases, and core computer application concepts.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="contact-panel">
+        <h2 id="contact-heading">Contact</h2>
+        <p>I am interested in opportunities and conversations around Cloud operations, DevOps, Docker, CI/CD, and AWS deployment.</p>
+        <ul class="contact-links">
+          <li><a href="mailto:dasbulbul215@gmail.com">Email me</a></li>
+          <li><a href="https://www.linkedin.com/in/bulbul-das-252029348" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/dasBulbul03" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Bulbul Das. A deployment-focused Cloud &amp; DevOps portfolio.</p></div>
+  </footer>
+</body>
+</html>
