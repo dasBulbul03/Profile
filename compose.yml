@@ -1,0 +1,6 @@
+services:
+  portfolio:
+    image: bulbul03/my-portfolio:latest
+    ports:
+      - "80:80"
+    restart: always
