@@ -1,7 +1,0 @@
-services:
-  portfolio:
-    image: bulbul03/my-portfolio:latest
-    container_name: my-portfolio
-    ports:
-      - "80:80"
-    restart: unless-stopped
